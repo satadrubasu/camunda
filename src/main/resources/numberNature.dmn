@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_14ucmfp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision_1do3pdq" name="DecisionDemo">
+    <decisionTable id="DecisionTable_15sdtkt" hitPolicy="RULE ORDER">
+      <input id="Input_1" label="Input Cell VAR" biodi:width="238" camunda:inputVariable="inputVar">
+        <inputExpression id="InputExpression_1" typeRef="integer" expressionLanguage="feel">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Output Nature" name="natureOfNumber" typeRef="string" biodi:width="192" />
+      <rule id="DecisionRule_162us1n">
+        <inputEntry id="UnaryTests_0abk5mv">
+          <text>&gt;= 1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h514bf">
+          <text>"Positive Number"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jlwu07">
+        <inputEntry id="UnaryTests_0tvpbtg">
+          <text>0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1trdg1h">
+          <text>"Zero"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1j1fvky">
+        <inputEntry id="UnaryTests_10v3d0t">
+          <text>&lt; 0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xnc28b">
+          <text>"Negative Number"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1do3pdq">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
