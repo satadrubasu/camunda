@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "d9f2fff7-72ac-4683-8662-37fd0956ef80",
+		"name": "camunda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Evaluate-decision-definition/key-BASE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\": {\r\n        \"inputVar\": {\r\n            \"value\": 0,\r\n            \"type\": \"integer\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/decision-definition/key/Decision_1do3pdq/evaluate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"decision-definition",
+						"key",
+						"Decision_1do3pdq",
+						"evaluate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_decision-definition/count",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/decision-definition/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"decision-definition",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_decision-definition-ByKey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080//engine-rest/decision-definition/key/Decision_1do3pdq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"engine-rest",
+						"decision-definition",
+						"key",
+						"Decision_1do3pdq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-engine-list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/engine-rest/engine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"engine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator-mappings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
